@@ -4,11 +4,6 @@ class Adotante {
     public $nome;
     public $animalAdotado; 
     
-
-    
-   
-
-   
     public function Nomedonovodono() {
         return $this->nome;
     }

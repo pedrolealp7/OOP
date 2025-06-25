@@ -3,6 +3,7 @@ include_once './Classes/Animal.class.php';
 include_once './Classes/Cachorro.class.php';
 include_once './Classes/Adotante.class.php';
 include_once './Classes/Gato.php';
+include_once './Classes/Cobra.class.php';
 
 
 // Criando o cachorro
@@ -23,7 +24,7 @@ $adotante->nome = "Pedro Rosa";
 $adotante->adotar($cachorro->Animalselecionado());
 
 // Exibindo os dados
-echo "<h2>Resumo da Adoção</h2>";
+echo "<h2>Resumo da adoção do Maicon</h2>";
 echo "Dono: " . $adotante->Nomedonovodono() . "<br>";
 echo $adotante->ResumoAdocao() . "<br><br>";
 
@@ -51,7 +52,7 @@ $adotante->nome = "Adriana Rosa";
 
 $adotante->adotar($gato->Animalselecionado());
 
-echo "<h2>Resumo da Adoção</h2>";
+echo "<h2>Resumo da adoção Pretinha</h2>";
 echo "Dono: " . $adotante->Nomedonovodono() . "<br>";
 echo $adotante->ResumoAdocao() . "<br><br>";
 
@@ -66,5 +67,43 @@ echo $gato->Miar();
 echo $gato->brincar();
 echo $gato->comer("ração");
 echo $gato->Amou("adorando");
+
+
+
+$cobra = new Cobra();
+$cobra->nome = "Marta";
+$cobra->tipo = "Reptil";
+$cobra->raca = "Piton";
+$cobra->cor = "Amarela e Branca";
+$cobra->sexo = "Feminina";
+$cobra->amigavel = FALSE;
+
+$adotante = new Adotante();
+$adotante->nome = "Dr.Sandro";
+
+$adotante->adotar($cobra->Animalselecionado());
+
+echo "<h2>Resumo da adoção Pretinha</h2>";
+echo "Dono: " . $adotante->Nomedonovodono() . "<br>";
+echo $adotante->ResumoAdocao() . "<br><br>";
+
+
+echo "Nome: " . $cobra->nome . "<br>";
+echo "Raça: " . $cobra->raca . "<br>";
+echo "Cor: " . $cobra->cor . "<br>";
+echo "Sexo: " . $cobra->sexo . "<br>";
+echo "Amigável: " . $cobra->amigavel() . "<br>";
+
+
+echo $cobra->brincar();
+echo $cobra->comer("ratos");
+
+
+
+
+
+
+
+
 
 ?>
